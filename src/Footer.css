@@ -1,0 +1,13 @@
+.Footer a {
+  color: #5a6275;
+  text-decoration: underline #ff3366;
+}
+
+.Footer a:hover {
+  color: #ff3366;
+}
+
+.Footer small {
+  display: block;
+  text-align: center;
+}
