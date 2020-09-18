@@ -105,3 +105,17 @@
   display: block;
   margin: 10px 10px 10px 0px;
 }
+
+.footer a {
+  color: #5a6275;
+  text-decoration: underline #ff3366;
+}
+
+.footer a:hover {
+  color: #ff3366;
+}
+
+.footer {
+  display: block;
+  text-align: right;
+}

@@ -50,9 +50,7 @@ export default function Weather() {
             <button id="geo-button">Find my city</button>
           </div>
         </div>
-        <br />
-        <div className="row" id="forecast"></div>
-      </div>{" "}
+      </div>
     </div>
   );
 }
