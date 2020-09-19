@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ShowDate from "./ShowDate";
 import axios from "axios";
 import "./Weather.css";
 
@@ -12,7 +13,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      date: "Saturday 10:44",
+      date: new Date(response.data.dt * 1000),
       iconUrl:
         "https://www.iconfinder.com/data/icons/photography-54/64/sunny-mode-camera-photography-512.png",
       description: response.data.weather[0].description,
@@ -25,7 +26,9 @@ export default function Weather(props) {
         <div className="Weather">
           <div className="row">
             <div className="col-6">
-              <h3>{weatherData.date}</h3>
+              <h3>
+                <ShowDate date={weatherData.date} />
+              </h3>
               <h1>{weatherData.city}</h1>
               <img
                 src={weatherData.iconUrl}
