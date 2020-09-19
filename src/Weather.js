@@ -37,19 +37,19 @@ export default function Weather() {
                   <span id="temp">{Math.round(weatherData.temperature)}</span>
                   <button href="#" id="celsius" className="active">
                     °C
-                  </button>{" "}
-                  <span> | </span>
+                  </button>
+                  |
                   <button href="#" id="farenheit">
                     °F
                   </button>
                 </span>
               </span>
               <div className="weather-description">
-                Humidity: {weatherData.humidity} <span id="humidity"></span>%
+                <span id="humidity">Humidity: {weatherData.humidity} %</span>
                 <br />
-                Wind: {Math.round(
-                  weatherData.wind
-                )} <span id="wind"></span> km/h
+                <span id="wind">
+                  Wind: {Math.round(weatherData.wind)} km/h{" "}
+                </span>
               </div>
             </div>
             <div className="col-6">

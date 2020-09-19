@@ -84,6 +84,8 @@
   font-family: "Comfortaa", cursive;
   padding-left: 10px;
   color: #ff3366;
+  position: relative;
+  top: 20px;
 }
 
 .Weather #up {
