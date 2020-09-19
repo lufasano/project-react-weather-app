@@ -9,6 +9,7 @@ export default function Weather() {
           className="link"
           href="https://github.com/lufasano/Weather-app"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Open-source code
         </a>
@@ -17,6 +18,7 @@ export default function Weather() {
           className="link"
           href="https://www.linkedin.com/in/lucianafasano/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Luciana Fasano.
         </a>

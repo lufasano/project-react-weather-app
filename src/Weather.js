@@ -17,13 +17,13 @@ export default function Weather() {
             <span id="degrees" className="temperature-units">
               <span id="temp">22</span>
               <span id="up">
-                <a href="#" id="celsius" className="active">
+                <button href="#" id="celsius" className="active">
                   °C
-                </a>{" "}
+                </button>{" "}
                 <span> | </span>
-                <a href="#" id="farenheit">
+                <button href="#" id="farenheit">
                   °F
-                </a>
+                </button>
               </span>
             </span>
             <div className="weather-description">

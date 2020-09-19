@@ -31,11 +31,11 @@
   margin: 0px auto;
 }
 
-.Weather a {
+.Weather button {
   color: #5a6275;
 }
 
-.Weather a:hover {
+.Weather button:hover {
   color: #ff3366;
 }
 
@@ -106,16 +106,14 @@
   margin: 10px 10px 10px 0px;
 }
 
-.footer a {
-  color: #5a6275;
-  text-decoration: underline #ff3366;
+.Weather #farenheit {
+  background-color: transparent;
+  border: 0px;
+  outline: none;
 }
 
-.footer a:hover {
-  color: #ff3366;
-}
-
-.footer {
-  display: block;
-  text-align: right;
+.Weather #celsius {
+  background-color: transparent;
+  border: 0px;
+  outline: none;
 }
