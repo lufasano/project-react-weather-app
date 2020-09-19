@@ -7,7 +7,7 @@ export default function Weather() {
       <div className="Weather">
         <div className="row">
           <div className="col-6">
-            <h3></h3>
+            <h3>Saturday 10:48</h3>
             <h1>Lisbon</h1>
             <img
               src="https://www.iconfinder.com/data/icons/photography-54/64/sunny-mode-camera-photography-512.png"
