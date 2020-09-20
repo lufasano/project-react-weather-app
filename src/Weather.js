@@ -14,8 +14,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
-      iconUrl:
-        "https://www.iconfinder.com/data/icons/photography-54/64/sunny-mode-camera-photography-512.png",
+      iconUrl: `./images/${response.data.weather[0].icon}.png`,
       description: response.data.weather[0].description,
     });
   }
