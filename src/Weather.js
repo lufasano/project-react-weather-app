@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ShowDate from "./ShowDate";
 import TemperatureConversion from "./TemperatureConversion";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -79,10 +80,10 @@ export default function Weather(props) {
                 <input className="button" type="submit" value="Search" />
               </form>
               <br />
-
-              <button id="geo-button">Find my city</button>
             </div>
           </div>
+          <br />
+          <WeatherForecast city={weatherData.city} />
         </div>
       </div>
     );
