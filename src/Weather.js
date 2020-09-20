@@ -5,7 +5,7 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -18,6 +18,20 @@ export default function Weather(props) {
         "https://www.iconfinder.com/data/icons/photography-54/64/sunny-mode-camera-photography-512.png",
       description: response.data.weather[0].description,
     });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "4343f1e579144285b50031dd6494ce85";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (weatherData.ready) {
@@ -57,14 +71,15 @@ export default function Weather(props) {
             </div>
             <div className="col-6">
               <br />
-              <form id="my-form">
+              <form onSubmit={handleSubmit} id="my-form">
                 <input
                   className="form"
                   id="form-input"
-                  type="text"
+                  type="search"
                   placeholder="Enter a city"
-                  autocomplete="off"
-                  autofocus="on"
+                  autoComplete="off"
+                  autoFocus="on"
+                  onChange={handleCityChange}
                 />
                 <input className="button" type="submit" value="Search" />
               </form>
@@ -77,10 +92,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "4343f1e579144285b50031dd6494ce85";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading...";
   }
 }
