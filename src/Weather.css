@@ -31,12 +31,13 @@
   margin: 0px auto;
 }
 
-.Weather button {
+.Weather a {
   color: #5a6275;
 }
 
-.Weather button:hover {
+.Weather a:hover {
   color: #ff3366;
+  text-decoration: none;
 }
 
 .Weather img {
@@ -79,18 +80,18 @@
   color: #5a6275;
 }
 
-.Weather #temp {
+.Weather .temperature {
   font-size: 38px;
   font-family: "Comfortaa", cursive;
   padding-left: 10px;
+  padding-right: 5px;
   color: #ff3366;
-  position: relative;
-  top: 20px;
 }
 
-.Weather #up {
+.Weather .unit {
   position: relative;
   top: -20px;
+  color: #5a6275;
 }
 
 .Weather #icon {

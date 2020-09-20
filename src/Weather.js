@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ShowDate from "./ShowDate";
+import TemperatureConversion from "./TemperatureConversion";
 import axios from "axios";
 import "./Weather.css";
 
@@ -50,14 +51,9 @@ export default function Weather(props) {
               />
               <span id="degrees" className="temperature-units">
                 <span id="up">
-                  <span id="temp">{Math.round(weatherData.temperature)}</span>
-                  <button href="#" id="celsius" className="active">
-                    °C
-                  </button>
-                  |
-                  <button href="#" id="farenheit">
-                    °F
-                  </button>
+                  <span id="temp">
+                    <TemperatureConversion celsius={weatherData.temperature} />
+                  </span>
                 </span>
               </span>
               <div className="weather-description">
