@@ -59,12 +59,18 @@
 .Weather .form {
   border: 2px solid #ff3366;
   max-width: 150px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 20px;
 }
 
 .Weather .button {
   background-color: #dee0e3;
   color: #ff3366;
   border: 2px solid #5a6275;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 20px;
 }
 
 .Weather .weather-description {
