@@ -1,26 +1,34 @@
 import React from "react";
 
 export default function WeatherForecastPreview(props) {
-  function hours() {
+  function day() {
     let date = new Date(props.data.dt * 1000);
-    let hours = date.getHours();
-    return `${hours}:00`;
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[day];
   }
-  function temperature() {
-    let temperature = Math.round(props.data.main.temp);
-    return ` ${temperature}°C`;
+  function maxTemp() {
+    let temperature = Math.round(props.data.temp.max);
+    return ` ${temperature}°`;
   }
-
+  function minTemp() {
+    let temperature = Math.round(props.data.temp.min);
+    return ` ${temperature}°`;
+  }
   return (
     <div className="WeatherForecastPreview col">
-      <div> {hours()} </div>
-      <img
-        src={`./images/${props.data.weather[0].icon}.png`}
-        alt={props.data.weather[0].description}
-        id="icon"
-      />{" "}
-      <br />
-      <div>{temperature()} </div>
+      <div> {day()} </div>
+      <div className="box">
+        <img
+          src={`./images/${props.data.weather[0].icon}.png`}
+          alt={props.data.weather[0].description}
+          id="icon"
+        />
+      </div>
+      <div>
+        <span className="Weather-forecast-temp-max">{maxTemp()}</span> |
+        <span className="Weather-forecast-temp-min">{minTemp()}</span>
+      </div>
     </div>
   );
 }
